@@ -87,8 +87,11 @@ public class Bartender
 					int input = kbReader.nextInt();
 					if (input > 0 && input <= 16) { //checks if input is within valid range
 						if (input <= 12) { //user adds an ingredient
+							if (syrup + sugar + grenadine + gin + vodka + rum + liquer + vermouth + tequila + lime + lemon + pineapple == 16) System.out.println("Shaker full, contents at 16 oz.");
+							else {
 							addingStuff = true; //loops until an ingredient is added, will go back to ingredient select screen after
 							System.out.print("Enter an amount (oz.): ");
+							}
 							while (addingStuff) {
 								if (kbReader.hasNextDouble()) { //checks if input is a valid number
 									double oz = kbReader.nextDouble();
@@ -205,5 +208,6 @@ public class Bartender
 		}
 	}
 }
+
 
 
